@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'instagram/login'
+  get 'instagram/redirect_url' => 'instagram#store_session', as: "instagram_session"
+
   mount Sidekiq::Web => "/sidekiq" # monitoring console
 
   root "home#index"

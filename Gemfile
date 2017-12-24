@@ -24,6 +24,9 @@ gem "sass-rails", "~> 5.0"
 gem "secure_headers", "~> 3.0"
 gem "sidekiq", ">= 4.2.0"
 gem "turbolinks", "~> 5"
+gem "instagram"
+gem "httparty"
+gem "httparty"
 
 group :production, :staging do
   gem "postmark-rails"
@@ -32,6 +35,18 @@ group :production, :staging do
 end
 
 group :development do
+
+  gem "pry"                   # better than irb
+  # # gem "byebug"                # ruby 2.0 debugger with built-in pry
+  gem "pry-rails"               # adds rails specific commands to pry
+  # gem "pry-byebug"              # add debugging commands to pry
+  gem "pry-stack_explorer"      # navigate call stack
+  gem "pry-rescue"            # start pry session on uncaught exception
+  gem "pry-doc"               # browse docs from console
+  gem "pry-git"               # add git support to console
+  gem "pry-remote"            # connect remotely to pry console
+
+
   gem "annotate", ">= 2.5.0"
   gem "awesome_print"
   gem "bcrypt_pbkdf", :require => false
