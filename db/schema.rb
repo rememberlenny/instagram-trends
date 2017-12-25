@@ -10,9 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20171225174202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "instagram_images", force: :cascade do |t|
+    t.string "instagram_post_id"
+    t.string "__typename"
+    t.string "edge_media_to_caption"
+    t.string "shortcode"
+    t.integer "edge_media_to_comment_count"
+    t.boolean "comments_disabled"
+    t.datetime "taken_at_timestamp"
+    t.integer "dimensions_width"
+    t.integer "dimensions_height"
+    t.string "display_url"
+    t.integer "edge_media_preview_like_count"
+    t.string "owner"
+    t.string "thumbnail_src"
+    t.string "thumbnail_resources_150"
+    t.string "thumbnail_resources_240"
+    t.string "thumbnail_resources_320"
+    t.string "thumbnail_resources_480"
+    t.string "thumbnail_resources_640"
+    t.boolean "is_video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

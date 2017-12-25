@@ -1,0 +1,71 @@
+# == Schema Information
+#
+# Table name: instagram_images
+#
+#  __typename                    :string
+#  comments_disabled             :boolean
+#  created_at                    :datetime         not null
+#  dimensions_height             :integer
+#  dimensions_width              :integer
+#  display_url                   :string
+#  edge_media_preview_like_count :integer
+#  edge_media_to_caption         :string
+#  edge_media_to_comment_count   :integer
+#  id                            :integer          not null, primary key
+#  instagram_post_id             :string
+#  is_video                      :boolean
+#  owner                         :string
+#  shortcode                     :string
+#  taken_at_timestamp            :datetime
+#  thumbnail_resources_150       :string
+#  thumbnail_resources_240       :string
+#  thumbnail_resources_320       :string
+#  thumbnail_resources_480       :string
+#  thumbnail_resources_640       :string
+#  thumbnail_src                 :string
+#  updated_at                    :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  __typename: MyString
+  edge_media_to_caption: MyString
+  shortcode: MyString
+  edge_media_to_comment_count: 1
+  comments_disabled: false
+  taken_at_timestamp: 2017-12-25 12:14:51
+  dimensions_width: MyString
+  dimensions_height: MyString
+  display_url: MyString
+  edge_media_preview_like_count: 1
+  owner: MyString
+  thumbnail_src: MyString
+  thumbnail_resources_150: MyString
+  thumbnail_resources_240: MyString
+  thumbnail_resources_320: MyString
+  thumbnail_resources_480: MyString
+  thumbnail_resources_640: MyString
+  is_video: false
+
+two:
+  id: MyString
+  __typename: MyString
+  edge_media_to_caption: MyString
+  shortcode: MyString
+  edge_media_to_comment_count: 1
+  comments_disabled: false
+  taken_at_timestamp: 2017-12-25 12:14:51
+  dimensions_width: MyString
+  dimensions_height: MyString
+  display_url: MyString
+  edge_media_preview_like_count: 1
+  owner: MyString
+  thumbnail_src: MyString
+  thumbnail_resources_150: MyString
+  thumbnail_resources_240: MyString
+  thumbnail_resources_320: MyString
+  thumbnail_resources_480: MyString
+  thumbnail_resources_640: MyString
+  is_video: false
