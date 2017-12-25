@@ -26,7 +26,10 @@ gem "sidekiq", ">= 4.2.0"
 gem "turbolinks", "~> 5"
 gem "instagram"
 gem "httparty"
-gem "httparty"
+
+gem 'kaminari'
+
+gem "haml-rails"
 
 group :production, :staging do
   gem "postmark-rails"

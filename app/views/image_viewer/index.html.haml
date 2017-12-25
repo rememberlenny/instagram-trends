@@ -1,0 +1,24 @@
+- provide(:title, "ImageViewer#index")
+%p Find me in app/views/image_viewer/index.html.erb
+
+%div
+  = paginate @images
+
+.row
+  - @images.each do |image|
+    .col-sm-6.col-md-2
+      .thumbnail
+        = link_to image_viewer_path(image.shortcode) do
+          = image_tag image.thumbnail_src
+        .caption
+          = link_to image_viewer_path(image.shortcode) do
+            %p
+              = "Comments: #{image.edge_media_to_comment_count}"
+            %p
+              = "Likes: #{image.edge_media_preview_like_count}"
+          %p
+            = link_to "Link", image_viewer_path(image.shortcode), class: "btn btn-primary"
+
+
+%div
+  = paginate @images

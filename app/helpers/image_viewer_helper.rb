@@ -1,0 +1,2 @@
+module ImageViewerHelper
+end

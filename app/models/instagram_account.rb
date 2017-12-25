@@ -3,8 +3,7 @@ class InstagramAccount
   def self.pull_next_images(url)
     puts "Getting images from #{url}"
     response = HTTParty.get(url)
-    # InstagramAccount.process_response(response)
-    InstagramAccount.delay.process_response(response)
+    InstagramAccount.process_response(response)
   end
 
   def self.process_response(response)
@@ -18,8 +17,7 @@ class InstagramAccount
       if response["posts"].count > 0
         puts "Pulled in response with #{response["posts"].count} results"
         response["posts"].each do |post|
-          # InstagramAccount.process_post_image(post)
-          InstagramAccount.delay.process_post_image(post)
+          InstagramAccount.process_post_image(post)
         end
       else
         puts "Pulled in response with no results"
@@ -62,7 +60,10 @@ class InstagramAccount
       end
     end
     params["thumbnail_src"] = post["thumbnail_src"]
-    InstagramImage.create(params)
+    existingImages = InstagramImage.where shortcode: params["shortcode"]
+    if existingImages.count == 0
+      InstagramImage.create(params)
+    end
   end
 
   # Starting point for pull_user_images aka. init
